@@ -10,4 +10,9 @@
 - Human approval is not required. A human `CHANGES_REQUESTED` review still blocks merging. Never use an admin bypass.
 - Enable GitHub auto-merge directly for every eligible non-draft PR. Use `gh pr merge --auto --squash --delete-branch`; never add or require an `auto-merge` label.
 - Work is not complete until GitHub reports the PR as merged.
+- Deploy only when the merged change must be made live in a running service.
+  Documentation, agent instructions, workflow policy, tests, and other
+  non-runtime changes do not need a deployment. Use staging only when changed
+  runtime behavior needs verification or exposure. Never deploy to production
+  without an explicit user request.
 - Use the Cloudflare dashboard or Terraform-owned infrastructure only when the user explicitly asks for a deployment or configuration change.
