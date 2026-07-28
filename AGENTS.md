@@ -2,7 +2,7 @@
 
 ## Repo Rules
 
-- Use a feature branch and pull request. Do not push directly to `main`, bypass hooks, or rewrite another contributor's branch.
+- Use a feature branch and pull request. Do not push directly to `main` or rewrite another contributor's branch. Using `--no-verify` is allowed only when the user explicitly requests it for that specific action.
 - Force-push is allowed on non-default branches. Never force-push `main`.
 - Keep `Worker.js` readable and do not add credentials, API tokens, or user IP data to the repository.
 - Wait for repository CI and the internal `AI Code Review` check. Fix valid blocking findings, push a fix, and wait for that check again.
