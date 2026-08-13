@@ -2,6 +2,11 @@
 
 ## Repo Rules
 
+AI review outcomes:
+
+- `NEUTRAL` is merge-allowed, including when providers are unavailable. A provider outage means the review is incomplete, so retry when practical; it does not block the merge by itself.
+- A missing, skipped, or cancelled review is not a completed review. Do not treat it as `NEUTRAL` or as evidence that the PR was reviewed.
+
 - Use a feature branch and pull request. Do not push directly to `main` or rewrite another contributor's branch. Using `--no-verify` is allowed only when the user explicitly requests it for that specific action.
 - Force-push is allowed on non-default branches. Never force-push `main`.
 - Keep `Worker.js` readable and do not add credentials, API tokens, or user IP data to the repository.
